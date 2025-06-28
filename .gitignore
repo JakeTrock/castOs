@@ -1,0 +1,4 @@
+mnt/**
+*.qcow2
+*.tar
+*.img
