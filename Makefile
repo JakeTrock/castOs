@@ -4,12 +4,13 @@ COL_END="\033[0m"
 
 UID=$(shell id -u)
 GID=$(shell id -g)
-VM_DISK_SIZE_MB?=1024
+VM_DISK_SIZE_MB?=4096
 
 REPO=docker-to-linux
 
 .PHONY:
-alpine: alpine.img
+alpine-headless: alpine-headless.img
+alpine-headed: alpine-headed.img
 
 %.tar:
 	@echo ${COL_GRN}"[Dump $* directory structure to tar archive]"${COL_END}
